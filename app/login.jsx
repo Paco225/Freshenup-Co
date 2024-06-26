@@ -58,10 +58,10 @@ export default function login() {
         </View>
         
         <View className="flex-row mt-8">
-          <Text className="text-gray-600">Don't have an account? </Text>
+          <Text className="text-gray-600">Pas de compte ? </Text>
           <Link replace href={"/inscription"} asChild>
           <TouchableOpacity >
-            <Text className="text-teal-500 font-bold">S'inscrire </Text>
+            <Text className="text-blue-500 font-bold">S'inscrire </Text>
           </TouchableOpacity>
           </Link>
       

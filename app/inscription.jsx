@@ -73,7 +73,6 @@ export default function inscription() {
            
           </View>
           <TouchableOpacity>
-            <Text className="text-right text-blue-500">Mot de passe oublié?</Text>
           </TouchableOpacity>
 
           <Link replace href={"/service"} asChild>
@@ -81,17 +80,14 @@ export default function inscription() {
             <Text className="text-white text-center font-bold">Login</Text>
           </TouchableOpacity>
           </Link>
-
-        </View>
-        
+        </View>  
         <View className="flex-row mt-8">
-          <Text className="text-gray-600">Don't have an account? </Text>
+          <Text className="text-gray-600">Déja un compte ? </Text>
           <Link replace href={"/service"} asChild>
           <TouchableOpacity >
-            <Text className="text-teal-500 font-bold">S'inscrire maintenant</Text>
+            <Text className="text-teal-500 font-bold"> Se connecter </Text>
           </TouchableOpacity>
           </Link>
-      
         </View>
       </View>
     </SafeAreaView>
