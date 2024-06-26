@@ -27,7 +27,6 @@ const Notifications = () => {
     'Votre commande vient d\'arriver au point de retrait',
     'Votre commande vient d\'arriver au point de retrait',
     'Votre commande vient d\'arriver au point de retrait',
-
   ];
 
   return (

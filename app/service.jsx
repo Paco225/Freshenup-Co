@@ -12,7 +12,7 @@ export default function service() {
     <StyledView className="flex-1 bg-white px-8 pt-2 pb-40">
       {/* Section 1: Logo */}
       <StyledView className="flex-1 justify-center items-center  pt-28  ">
-        <Image source={require('../assets/images/react-logo.png')} className="w-40 h-40" />
+        <Image source={require('../assets/images/fresh.png')} className="w-40 h-40" />
       </StyledView>
 
       {/* Section 2: Texte */}
@@ -22,18 +22,22 @@ export default function service() {
 
       {/* Section 3: Boutons */}
       <StyledView className="flex-1 flex-row justify-around items-center gap-10">
-      <Link href="/page2" asChild>
+      <Link replace href="/(tabs2)" asChild>
           <StyledPressable className="items-center">
-            <StyledView className="w-40 h-40 bg-gray-200 justify-center items-center rounded-lg">
-              <Image source={require('../assets/images/Car.png')} className="w-20 h-20" />
+            <StyledView style={(
+              {backgroundColor : 'rgba(28, 163, 247, 0.27)'}
+            )} className=" bg-slate-100 w-40 h-40  justify-center items-center rounded-lg">
+              <Image source={require('../assets/images/acheter.png')} className="w-20 h-20" />
             </StyledView>
             <StyledText className="mt-2 text-md text-center">Commander un {'\n'} service</StyledText>
           </StyledPressable>
         </Link>
-        <Link href="/(tabs)" asChild>
+        <Link replace href="/(tabs)" asChild>
           <StyledPressable className="items-center">
-            <StyledView className="w-40 h-40 bg-gray-200 justify-center items-center rounded-lg">
-              <Image source={require('../assets/images/Car.png')} className="w-20 h-20" />
+            <StyledView style={(
+              {backgroundColor : 'rgba(28, 163, 247, 0.27)'}
+            )} className="w-40 h-40 justify-center items-center rounded-lg">
+              <Image source={require('../assets/images/acheter.png')} className="w-20 h-20" />
             </StyledView>
             <StyledText className="mt-2 text-md text-center">Acheter un {'\n'} produit</StyledText>
           </StyledPressable>

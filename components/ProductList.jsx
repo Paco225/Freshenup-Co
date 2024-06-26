@@ -6,12 +6,11 @@ import img from '../assets/images/prod.png'
 import { FontAwesome } from '@expo/vector-icons';
 import { Link, useNavigation } from 'expo-router';
 
-
-// Définir les styles en utilisant NativeWind
 const StyledView = styled(View);
 const StyledText = styled(Text);
 const StyledImage = styled(Image);
 const StyledButton = styled(TouchableOpacity);
+
 
 const products = [
     {
@@ -41,9 +40,9 @@ const products = [
 ];
 
 const ProductCard = ({ product }) => (
-    <Link push href='/onboard4' asChild className=''>
+    <Link push href='/DetailsProd' asChild className=''>
     <Pressable className="  flex">
-    <StyledView className="p-4 bg-white rounded-lg shadow-md mb-4 w-48">
+    <StyledView className="p-4 bg-white rounded-lg shadow-md mb-4 w-35">
         <StyledImage
             source={product.image }
             className="w-full h-40 rounded-lg"
@@ -61,9 +60,9 @@ const ProductCard = ({ product }) => (
 );
 const ProductList = () => (
  
-    <ScrollView className='pt-4'>
-           <View className=' '>
-      <Text className="font-bold text-[19px] pt-3">Produits vedettes</Text>
+    <ScrollView className='pt-8 '>
+           <View className=' justify-center '>
+      <Text className="font-bold text-[19px] pt-3 pb-2">Produits vedettes</Text>
         </View>
     <StyledView style={{ flex: 1, flexWrap: 'wrap', flexDirection: 'row' }}>
       {products.map(product => (
@@ -72,16 +71,15 @@ const ProductList = () => (
         </StyledView>
       ))}
     </StyledView>
-    <Link href='/onboard4' asChild className=''>
+    <Link href='/DetailsProd' asChild className=''>
             <Pressable className=" px-2 flex">
                 <View className=' flex flex-row items-center justify-end  pr-3 pb-12  '>
-                    <Text className="text-blue-600 text-[14px] font-semibold pr-2 ">Voir tout</Text> 
-                    <FontAwesome name='arrow-right' color="rgb(37, 99 ,235)" size={10}  light className='items-center flex' />
+                    <Text className="text-green-600 text-[14px] font-semibold pr-2 ">Voir tout</Text> 
+                    <FontAwesome name='angle-right' color="green" size={16}   className='items-center flex' />
                 </View>
             </Pressable>
         </Link>
   </ScrollView>
   
 );
-
 export default ProductList;

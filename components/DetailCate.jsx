@@ -6,8 +6,6 @@ import img from '../assets/images/prod.png'
 import { FontAwesome } from '@expo/vector-icons';
 import { Link, useNavigation } from 'expo-router';
 
-
-// Définir les styles en utilisant NativeWind
 const StyledView = styled(View);
 const StyledText = styled(Text);
 const StyledImage = styled(Image);
@@ -39,9 +37,8 @@ const products = [
         image: img
     }
 ];
-
 const ProductCard = ({ product }) => (
-    <Link push href='/onboard4' asChild className=''>
+    <Link push href={'/./DetailsProd'} asChild className=''>
     <Pressable className=" flex">
     <StyledView className="p-4 bg-white rounded-lg mb-4 w-48">
         <StyledImage
@@ -72,10 +69,9 @@ const DetailCate = ({titre ='Senteurs'}) => (
         </StyledView>
       ))}
     </StyledView>
-    <Link href='/onboard4' asChild className=''>
+    <Link href='' asChild className=''>
             <Pressable className="flex">
                 <View className=' flex flex-row items-center justify-end  pr-3 pb-12  '>
-                    <Text className="text-blue-600 text-[14px] font-semibold pr-2 ">Voir tout</Text> 
                     <FontAwesome name='arrow-right' color="rgb(37, 99 ,235)" size={10}  light className='items-center flex' />
                 </View>
             </Pressable>

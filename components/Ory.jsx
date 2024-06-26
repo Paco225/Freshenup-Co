@@ -2,7 +2,7 @@
 import React from 'react';
 import { View, Text, Image, TouchableOpacity, ScrollView, SafeAreaView,Pressable } from 'react-native';
 import { styled } from 'nativewind';
-import img from '../assets/images/prod.png'
+import img from '../assets/images/parffum.png'
 import { FontAwesome } from '@expo/vector-icons';
 import { Link, useNavigation } from 'expo-router';
 
@@ -21,12 +21,12 @@ const orys = [
     },
     {
         id: 2,
-        label: "Senteur",
+        label: "Gadgets maison & cuisine",
         image: img
     },
     {
         id: 3,
-        label: "Senteur",
+        label: "Autre",
         image: img
     },
     {
@@ -36,12 +36,12 @@ const orys = [
     },
     {
         id: 5,
-        label: "Senteur",
+        label: "Gadget et maison",
         image: img
     },
     {
         id: 6,
-        label: "Senteur",
+        label: "Autre",
         image: img
     },
 ];
@@ -49,7 +49,7 @@ const orys = [
 const OryCard = ({ orys }) => (
     <Link push href={`../category/Category${orys.id}`} asChild className=''>
     <Pressable className="items-center ">
-        <View className='bg-gray-300 rounded-full w-[64px] h-[64px]  items-center justify-center'>
+        <View className=' rounded-full bg-[#B9E9CD] w-[64px] h-[64px]  items-center justify-center'>
             <Image source={orys.image} className="w-9 h-9" />
         </View>
         <View className='flex '>

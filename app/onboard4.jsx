@@ -37,7 +37,7 @@ export default function Index() {
               <View className="w-[15px] rounded-md bg-blue-300 h-[8px]"></View>
 
             </View>
-            <Link replace href={"/service"} asChild>
+            <Link replace href={"/login"} asChild>
               <Pressable>
                 <View className="rounded-md px-4 w-[72px] h-[52px] text-white mt-5 bg-[#1DA6F8] flex items-center justify-center mb-4">
                   <FontAwesome name="arrow-right" size={20} color="white" light />

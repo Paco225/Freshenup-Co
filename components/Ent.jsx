@@ -16,12 +16,11 @@ export default function Ent() {
             <Image source={require('../assets/images/react-logo.png')} className="w-12 h-12" />
             <StyledTouchableOpacity
                 className="bg-[#055EEA] py-2 px-4 rounded-[20px]"
-                onPress={() => router.push('/(tabs2)')}
+                onPress={() => router.replace('/(tabs2)')}
             >
                 <StyledText className="text-white text-md">Basculer en mode Service</StyledText>
             </StyledTouchableOpacity>
         </View>
-p
     </StyledView>
     );
 }

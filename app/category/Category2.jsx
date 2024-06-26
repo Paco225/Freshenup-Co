@@ -12,7 +12,12 @@ const Category2 = () => {
         <Back title ='Categories'/>     
         <ScrollView className='px-4'>
         <Entete/>
-             <DetailCate />
+          <View className='justify-center items-center'>
+          <Text className='items-center'>
+             (Aucun produit disponible pour l'instant)
+          </Text>
+
+          </View>
         </ScrollView>
    
     </SafeAreaView>

@@ -14,10 +14,10 @@ export default function Entete({message, couleur}) {
     return (
         <StyledView className="block items-center justify-between p-4 ">
             <View className='flex flex-row items-center justify-between space-x-28'>
-                <Image source={require('../assets/images/react-logo.png')} className="w-12 h-12" />
+                <Image source={require('../assets/images/fresh.png')} className="w-12 h-12" />
                 <StyledTouchableOpacity
                     className="bg-[#055EEA] py-2 px-4 rounded-[20px]"
-                    onPress={() => router.push('/(tabs2)')}
+                    onPress={() => router.replace('/(tabs2)')}
                 >
                     <StyledText className="text-white text-md">Basculer en mode Service</StyledText>
                 </StyledTouchableOpacity>

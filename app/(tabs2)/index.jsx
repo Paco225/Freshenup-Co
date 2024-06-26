@@ -10,17 +10,15 @@ import { ScrollView } from 'react-native'
 const index = () => {
     return (
 
-            <SafeAreaView >
+        <SafeAreaView className='bg-white' >
+            <ScrollView className='px-2 bg-white' showsHorizontalScrollIndicator={false} showsVerticalScrollIndicator={false}>
                 <Entete1 />
-                <ScrollView className='px-4' showsHorizontalScrollIndicator={false} showsVerticalScrollIndicator={false}>
-
                 <CategoriesScreen1 />
-            
                 <Images />
                 <ProductList1 />
             </ScrollView>
-            </SafeAreaView>
-        
+        </SafeAreaView>
+
     )
 }
 

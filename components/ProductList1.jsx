@@ -3,6 +3,10 @@ import React from 'react';
 import { View, Text, Image, TouchableOpacity, ScrollView, SafeAreaView,Pressable } from 'react-native';
 import { styled } from 'nativewind';
 import img from '../assets/images/lave.png'
+import couette from '../assets/images/couette.jpg'
+import rideaux from '../assets/images/repair.png'
+import vet from '../assets/images/vetement.jpg'
+import drap from '../assets/images/drap.png'
 import { FontAwesome } from '@expo/vector-icons';
 import { Link, useNavigation } from 'expo-router';
 
@@ -16,36 +20,39 @@ const StyledButton = styled(TouchableOpacity);
 const products = [
     {
         id: 1,
-        name: "Spray Toilettes",
-        price: 2500,
-        image: img,
+        name: "Lavage de vetements",
+        price: 5000,
+        image: vet,
         unit : '10 vetements'
     },
     {
         id: 2,
-        name: "Spray Toilettes",
+        name: "Lavage rideaux",
         price: 2500,
-        image: img,
+        image: rideaux,
         unit : 'à l unité'
     },
     {
         id: 3,
-        name: "Spray Toilettes",
-        price: 2500,
-        image: img,
+        name: "Lavage de drap",
+        price: 1000,
+        image: drap,
         unit : 'à l unité'
     },
     {
         id: 4,
-        name: "Spray Toilettes",
-        price: 2500,
-        image: img,
-        unit : '10 vetements'
+        name: "Lavage de couette",
+        price: 3500,
+        image: couette,
+        unit : 'à l unité'
     }
 ];
 
 const ProductCard = ({ product }) => (
-    <StyledView className="p-4 bg-white rounded-lg shadow-md mb-4 w-48">
+    <Link push href='/' asChild className=''>
+    <Pressable className="  flex">
+
+    <StyledView className="p-4 bg-white rounded-lg shadow-md mb-4 w-35">
         <StyledImage
             source={product.image }
             className="w-full h-40 rounded-lg"
@@ -56,24 +63,30 @@ const ProductCard = ({ product }) => (
         <StyledText style={(
             { color: 'rgba(28, 163, 247, 1)' }
         )} className="mt-1 text-lg">{product.price} FCFA</StyledText>
-        
- 
     </StyledView>
+    </Pressable>
+</Link>
+
 );
 const ProductList1 = () => (
  
-    <ScrollView className='pt-4'>
+    <ScrollView className='pt-8'>
            <View className=' '>
-      <Text className="font-bold text-[19px] pt-3">Produits vedettes</Text>
+      <Text className="font-bold text-[19px] pt-3 pb-4">Produits vedettes</Text>
         </View>
+        <Link push href='/DetailsService' asChild className=''>
+
     <StyledView style={{ flex: 1, flexWrap: 'wrap', flexDirection: 'row' }}>
       {products.map(product => (
         <StyledView key={product.id} style={{ width: '50%' }}>
           <ProductCard product={product} />
         </StyledView>
+        
       ))}
     </StyledView>
-    <Link href='/onboard4' asChild className=''>
+    </Link>
+
+    <Link push href='/' asChild className=''>
             <Pressable className=" px-2 flex">
                 <View className=' flex flex-row items-center justify-end  pr-3 pb-12  '>
                     <Text className="text-blue-600 text-[14px] font-semibold pr-2 ">Voir tout</Text> 

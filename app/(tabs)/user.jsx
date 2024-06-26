@@ -1,12 +1,17 @@
-import { View, Text } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import Ent from '../../components/Ent'
+import Profile from '../../components/Profile'
+import ProfilSection from '../../components/ProfilSections'
+import ProfilSections from '../../components/ProfilSections'
+
 
 const user = () => {
   return (
     <SafeAreaView>
-      <Text>Profil</Text>
+      <Ent/>
+      <Profile/>
+      <ProfilSections/>
     </SafeAreaView> 
   )
 }

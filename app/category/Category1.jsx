@@ -10,12 +10,10 @@ const Category1 = () => {
   return (
     <SafeAreaView >
         <Back title ='Categories'/>
-       
         <ScrollView className='px-4'>
         <Entete/>
              <DetailCate/>
         </ScrollView>
-   
     </SafeAreaView>
     
   )

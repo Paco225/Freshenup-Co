@@ -6,6 +6,8 @@ export default function RootLayout() {
     <Stack screenOptions={{title:"Freshenup&Co",headerShown:false,headerShadowVisible:false}}>
       <Stack.Screen name='(tabs)' />
       <Stack.Screen name='(tabs2)' />
+      <Stack.Screen name='Avis' />
+
     </Stack>
   );
 }
