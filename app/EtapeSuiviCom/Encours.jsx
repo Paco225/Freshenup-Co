@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const Commentaire = () => {
+const Encours = () => {
   return (
     <View>
-      <Text>Commentaire</Text>
+      <Text>Encours</Text>
     </View>
   )
 }
 
-export default Commentaire
+export default Encours

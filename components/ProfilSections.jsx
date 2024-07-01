@@ -4,6 +4,7 @@ import { View, Text, TouchableOpacity, BackHandler, Platform, Alert } from 'reac
 import { useRouter } from 'expo-router';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
+
 const ProfilSections = () => {
   const router = useRouter();
   const quitterApp = () => {
@@ -23,14 +24,14 @@ const ProfilSections = () => {
          <TouchableOpacity onPress={() => router.push('/ProfilePages/Infos')}>
       <View className="flex-row items-center py-4 px-4  shadow-md rounded-md">
         <View className="p-3 rounded-full ">
-          <FontAwesome name="user" size={24} color="green" />
+          <FontAwesome name="user" size={24} color="skyblue" />
         </View>
         <View className="flex-1 ml-4">
           <Text className="text-black text-[16px] font-bold pb-0.2">Informations personnelles</Text>
           <Text className="text-gray-600 text-md">informations incomplètes</Text>
         </View>
         <View className='mr-10'>
-          <FontAwesome name="exclamation" size={24} color="gray" light />
+          <FontAwesome name="exclamation" size={24} color="red" light />
         </View>
         <View>
           <FontAwesome name="angle-right" size={24} color="gray" />
@@ -40,41 +41,24 @@ const ProfilSections = () => {
      <TouchableOpacity onPress={() => router.push('/ProfilePages/SuiviCom')}>
      <View className="flex-row items-center py-4 px-4  shadow-md rounded-md">
        <View className=" p-3 rounded-full ">
-         <FontAwesome name="user" size={24} color="green" />
+         <FontAwesome name="shopping-cart" size={24} color="skyblue" thin />
        </View>
        <View className="flex-1 ml-4">
          <Text className="text-black text-[16px] font-bold pb-0.2">Mes commandes</Text>
          <Text className="text-gray-600 text-md">Suivez le parcours de vos composants</Text>
        </View>
        <View className='mr-10'>
-         <FontAwesome name="exclamation" size={24} color="gray" light />
        </View>
        <View>
          <FontAwesome name="angle-right" size={24} color="gray" />
        </View>
      </View>
    </TouchableOpacity>
-   <TouchableOpacity onPress={() => router.push('/ProfilePages/Docs')}>
-   <View className="flex-row items-center py-4 px-4  shadow-md rounded-md">
-     <View className=" p-3 rounded-full ">
-       <FontAwesome name="user" size={24} color="green" />
-     </View>
-     <View className="flex-1 ml-4">
-       <Text className="text-black text-[16px] font-bold pb-0.2">Mes documents</Text>
-       <Text className="text-gray-600 text-md">Ma pièce didentité</Text>
-     </View>
-     <View className='mr-10'>
-       <FontAwesome name="exclamation" size={24} color="gray" light />
-     </View>
-     <View>
-       <FontAwesome name="angle-right" size={24} color="gray" />
-     </View>
-   </View>
- </TouchableOpacity>
+  
  <TouchableOpacity  onPress={quitterApp}>
       <View className="flex-row items-center py-4 px-4  shadow-md rounded-md">
         <View className=" p-3 rounded-full ">
-          <FontAwesome name="user" size={24} color="green" />
+          <FontAwesome name="sign-out" size={24} color="skyblue" thin />
         </View>
         <View className="flex-1 ml-4">
           <Text className="text-black text-[16px] font-bold pb-0.2">Se déconnecter</Text>

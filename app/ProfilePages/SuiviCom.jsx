@@ -7,9 +7,8 @@ import Back from '../../components/Back'
 const SuiviCom = () => {
     return (
         <SafeAreaView>
-            <Back title="Mes commandes" />
-            <SuiviCmd />
-       
+            <Back title="Mes commandes"/>
+            <SuiviCmd/>
         </SafeAreaView>
 
     )

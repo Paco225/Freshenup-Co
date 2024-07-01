@@ -86,14 +86,7 @@ const DesinfectionDetail = () => (
                 ))}
             </StyledView>
         </Link>
-        <Link push href='/' asChild className=''>
-            <Pressable className="px-2 flex">
-                <View className='flex flex-row items-center justify-end pr-3 pb-12'>
-                    <Text className="text-blue-600 text-[14px] font-semibold pr-2">Voir tout</Text>
-                    <FontAwesome name='arrow-right' color="rgb(37, 99 ,235)" size={10} light className='items-center flex' />
-                </View>
-            </Pressable>
-        </Link>
+       
     </ScrollView>
 );
 

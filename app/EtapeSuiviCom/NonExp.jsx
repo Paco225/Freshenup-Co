@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const Commentaire = () => {
+const NonExp = () => {
   return (
     <View>
-      <Text>Commentaire</Text>
+      <Text>NonExp</Text>
     </View>
   )
 }
 
-export default Commentaire
+export default NonExp

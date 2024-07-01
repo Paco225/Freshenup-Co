@@ -9,7 +9,6 @@ const TotalEvent = () => {
     <SafeAreaView>
       <Back title='contrat de cuisine'/>
       <TotalEventComponent/>
-
     </SafeAreaView>
   )
 }

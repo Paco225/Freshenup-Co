@@ -8,7 +8,7 @@ import ProfilSections from '../../components/ProfilSections'
 
 const user = () => {
   return (
-    <SafeAreaView>
+    <SafeAreaView className = 'bg-white'>
       <Ent/>
       <Profile/>
       <ProfilSections/>

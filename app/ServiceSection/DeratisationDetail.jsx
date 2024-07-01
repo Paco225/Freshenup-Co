@@ -52,27 +52,26 @@ const products = [
 ];
 
 const ProductCard = ({ product }) => (
-    <Link push href='/' asChild className=''>
-        <Pressable className="flex">
-            <StyledView className="p-4 bg-white shadow-md mb-4 w-35">
-                <StyledImage
-                    source={product.image}
-                    className="w-full h-40 rounded-lg"
-                    resizeMode="cover"
-                />
-                <StyledText className="mt-2 text-[16px] font-bold">{product.name}</StyledText>
-                <StyledText style={{ color: 'rgba(28, 163, 247, 1)' }} className="mt-1 text-lg">
-                    {product.price === 'sur devis' ? product.price : `${product.price} FCFA`}
-                </StyledText>
-            </StyledView>
-        </Pressable>
-    </Link>
+    <Pressable className="flex">
+        <StyledView className="p-4 bg-white shadow-md mb-4 w-35">
+            <StyledImage
+                source={product.image}
+                className="w-full h-40 rounded-lg"
+                resizeMode="cover"
+            />
+            <StyledText className="mt-2 text-[16px] font-bold">{product.name}</StyledText>
+            <StyledText style={{ color: 'rgba(28, 163, 247, 1)' }} className="mt-1 text-lg">
+                {product.price === 'sur devis' ? product.price : `${product.price} FCFA`}
+            </StyledText>
+        </StyledView>
+    </Pressable>
 );
 
 const DeratisationDetail = () => (
     <ScrollView className='bg-white'>
         <View className=' '></View>
-        <Link push href='/DetailsService' asChild className=''>
+        <Link push href='/' asChild className=''>
+
             <StyledView style={{ flex: 1, flexWrap: 'wrap', flexDirection: 'row' }}>
                 {products.map(product => (
                     <StyledView key={product.id} style={{ width: '50%' }}>
@@ -80,15 +79,8 @@ const DeratisationDetail = () => (
                     </StyledView>
                 ))}
             </StyledView>
-        </Link>
-        <Link push href='/' asChild className=''>
-            <Pressable className="px-2 flex">
-                <View className='flex flex-row items-center justify-end pr-3 pb-12'>
-                    <Text className="text-blue-600 text-[14px] font-semibold pr-2">Voir tout</Text>
-                    <FontAwesome name='arrow-right' color="rgb(37, 99 ,235)" size={10} light className='items-center flex' />
-                </View>
-            </Pressable>
-        </Link>
+        </Link >
+
     </ScrollView>
 );
 
