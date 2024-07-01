@@ -41,16 +41,20 @@ const ProductName = styled(Text, 'text-md font-bold');
 const ProductPrice = styled(Text, 'text-[12px] text-gray-600 py-1');
 const ProductStatus = styled(View, 'py-1 px-2 rounded-md');
 const ProductStatusText = styled(Text, 'text-white text-center text-md');
+import { useRouter } from 'expo-router';
+import { Link } from 'expo-router';
 
 const SuiviCmd = () => {
-  const navigation = useNavigation();
 
-  const handlePress = (routeName) => {
-    navigation.navigate('EtapeSuiviCom', { screen: routeName });
+  const router = useRouter();
+
+  const handlePress = (lien) => {
+    router.push(`/EtapeSuiviCom/${lien}`);
   };
 
   return (
     <ScrollView className="p-4 bg-gray-100">
+      
       {products.map((product) => (
         <ProductCard key={product.id} onPress={() => handlePress(product.lien)}>
           <ProductImage source={product.image} />
