@@ -4,6 +4,7 @@ import { styled } from 'nativewind';
 import { useNavigation } from '@react-navigation/native';
 import prod from '../assets/images/prod.png'
 
+
 const products = [
   {
     id: 1,
@@ -52,6 +53,7 @@ const SuiviCmd = () => {
     router.push(`/EtapeSuiviCom/${lien}`);
   };
 
+
   return (
     <ScrollView className="p-4 bg-gray-100">
       
@@ -70,5 +72,6 @@ const SuiviCmd = () => {
     </ScrollView>
   );
 };
+
 
 export default SuiviCmd;

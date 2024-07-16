@@ -7,6 +7,8 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import LavageLuxe from '../ServiceSection/LavageLuxe';
 import LavageLuxePro from '../ServiceSection/LavageLuxePro';
 import LavageNormal from '../ServiceSection/LavageNormal';
+
+
 const StyledView = styled(View);
 const StyledText = styled(Text);
 const StyledTouchableOpacity = styled(TouchableOpacity);
@@ -43,7 +45,6 @@ const Auto = () => {
     <SafeAreaView className="flex-1 py-4 px-3 bg-white">
       <Back/>
       <Entete1/>
-
       <StyledView className="flex flex-row justify-around mb-4">
         <StyledTouchableOpacity className='rounded-lg ' onPress={() => setSelectedTab('normal')}>
           <StyledText className={`px-4 py-2 ${selectedTab === 'normal' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}>Lavage normal</StyledText>
