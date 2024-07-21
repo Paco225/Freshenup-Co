@@ -20,7 +20,7 @@ const ProfilSections = () => {
   };
 
   return (
-    <View className='mt-16  bg-white h-screen'>
+    <View className='mt-6  bg-white h-screen'>
          <TouchableOpacity onPress={() => router.push('/ProfilePages/Infos')}>
       <View className="flex-row items-center py-4 px-4  shadow-md rounded-md">
         <View className="p-3 rounded-full ">

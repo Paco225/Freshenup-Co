@@ -28,7 +28,7 @@ const Profile = () => {
     };
 
     return (
-        <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', paddingTop: 14, paddingBottom:20}}>
+        <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', paddingTop: 14, paddingBottom:10}}>
             <View style={{ position: 'relative' }}>
                 <Image
                     source={image}

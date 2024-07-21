@@ -45,11 +45,11 @@ const Commentaire = () => {
   };
 
   return (
-      <View className="flex p-4 bg-white">
+      <View className="flex h-screen p-4 mb-4 bg-gray-100">
         {/* Section Commentaires */}
-        <ScrollView className="flex-1 mb-4">
+        <ScrollView className="flex-1  ">
           {commentaires.map(commentaire => (
-            <View key={commentaire.id} className="p-4 mb-2 border border-gray-300 rounded-lg">
+            <View key={commentaire.id} className="p-4 border border-slate-150 mb-4 rounded-xl">
               <Text className="font-bold">{commentaire.nom}</Text>
               <Text className="text-gray-500">{commentaire.date}</Text>
               <Text>Note: {commentaire.note} ⭐</Text>
@@ -62,14 +62,14 @@ const Commentaire = () => {
         <TouchableOpacity
           onPress={handleAjouterCommentaire}
           style={{
-            position: 'fixed',
-            bottom: 130,
+            position: 'absolute',
+            bottom: 340,
             right: 0,
             left: 280,
             width: 60,
             height: 60,
             borderRadius: 30,
-            backgroundColor: 'green',
+            backgroundColor: '#2BBB68',
             justifyContent: 'center',
             alignItems: 'center',
             shadowColor: '#000',

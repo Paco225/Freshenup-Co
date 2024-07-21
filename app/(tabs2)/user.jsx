@@ -1,6 +1,6 @@
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import Ent from '../../components/Ent'
+import Entete1 from '../../components/Entete1'
 import Profile from '../../components/Profile'
 import ProfilSection from '../../components/ProfilSections'
 import ProfilSections from '../../components/ProfilSections'
@@ -9,10 +9,9 @@ import ProfilSections from '../../components/ProfilSections'
 const user = () => {
   return (
     <SafeAreaView className = 'bg-white'>
-      <Ent/>
+      <Entete1/>
       <Profile/>
       <ProfilSections/>
-
     </SafeAreaView> 
   )
 }

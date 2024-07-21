@@ -3,7 +3,7 @@ import React from 'react'
 
 const Note = () => {
   return (
-    <View className='mt-4 mb-3'>
+    <View className='mt-4 mb-3 '>
       <View className='justify-center items-center'>
         <Text className='text-center text-[90px]'>4.5</Text>
         <Text className="text-yellow-500 text-center text-3xl">★★★★☆</Text>
