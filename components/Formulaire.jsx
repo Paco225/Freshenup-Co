@@ -1,9 +1,9 @@
 // app/FormScreen.js
 import React, { useState } from 'react';
-import { View, TextInput, Button, Alert, Touchable, Text, Pressable } from 'react-native';
+import { View, TextInput, Alert, Text, Pressable } from 'react-native';
 import { useRouter } from 'expo-router';
 import { styled } from 'nativewind';
-import { Link } from 'expo-router';
+import Photo from '../app/ProfilePages/Photo';
 
 const StyledTextInput = styled(TextInput);
 
@@ -19,22 +19,23 @@ const FormScreen = () => {
 
     const handleSubmit = () => {
         if (email && lastName && firstName && city && address && whatsapp) {
-            Alert.alert('Form submitted successfully');
+            Alert.alert('Formulaire soumis avec succès');
+            // Clear the form fields after successful submission
             setEmail('');
             setLastName('');
             setFirstName('');
             setCity('');
             setAddress('');
             setWhatsapp('');
-            router.push('/SuccessScreen');
+            // Navigate to SuccessScreen
+            router.push('/ProfilePages/Photo');
         } else {
             Alert.alert('Veuillez entrer toutes les informations');
         }
     };
-
     return (
-        <View className="p-6 mt-10 " >
-            <TextInput
+        <View className="p-6 mt-10">
+            <StyledTextInput
                 placeholder="Mail"
                 value={email}
                 onChangeText={setEmail}
@@ -77,10 +78,8 @@ const FormScreen = () => {
             >
                 <Text className="text-white text-center">Valider mes informations</Text>
             </Pressable>
-
         </View>
     );
 };
 
 export default FormScreen;
-

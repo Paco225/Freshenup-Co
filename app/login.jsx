@@ -17,7 +17,7 @@ export default function login() {
       <View className="flex-1 justify-center items-center">
         <Image
           source={logo}
-          className="w-40 h-20 mb-8"
+          className="w-40 h-28 mb-8"
           resizeMode="contain"
         />
         

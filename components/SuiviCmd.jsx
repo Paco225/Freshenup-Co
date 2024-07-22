@@ -31,13 +31,13 @@ const products = [
     status: 'Prêt pour récupération',
     statusColor: 'bg-green-500',
     image: prod, 
-    lien: 'NonExp'
+    lien: 'Recup'
   },
 ];
 
-const ProductCard = styled(TouchableOpacity, 'bg-white flex-row items-center bg-white rounded-lg px-1 shadow-md py-4 mb-4');
-const ProductImage = styled(Image, 'w-24 h-24 rounded-md');
-const ProductInfo = styled(View, 'flex-1 ml-4 mr-4');
+const ProductCard = styled(TouchableOpacity, 'flex-row items-center  rounded-lg  shadow-md py-4 mb-4 ');
+const ProductImage = styled(Image, 'w-20 h-20 rounded-md');
+const ProductInfo = styled(View, 'flex-1 ml-4 mr-2');
 const ProductName = styled(Text, 'text-md font-bold');
 const ProductPrice = styled(Text, 'text-[12px] text-gray-600 py-1');
 const ProductStatus = styled(View, 'py-1 px-2 rounded-md');
@@ -47,8 +47,8 @@ import { Link } from 'expo-router';
 
 const SuiviCmd = () => {
 
+  
   const router = useRouter();
-
   const handlePress = (lien) => {
     router.push(`/EtapeSuiviCom/${lien}`);
   };
@@ -58,7 +58,7 @@ const SuiviCmd = () => {
     <ScrollView className="p-4 bg-gray-100">
       
       {products.map((product) => (
-        <ProductCard key={product.id} onPress={() => handlePress(product.lien)}>
+        <ProductCard className='' key={product.id} onPress={() => handlePress(product.lien)}>
           <ProductImage source={product.image} />
           <ProductInfo>
             <ProductName>{product.name}</ProductName>
@@ -72,6 +72,4 @@ const SuiviCmd = () => {
     </ScrollView>
   );
 };
-
-
 export default SuiviCmd;

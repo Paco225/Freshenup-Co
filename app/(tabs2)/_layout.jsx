@@ -28,15 +28,7 @@ export default function Layout() {
           ),
         }}
       />
-      <Tabs.Screen
-        name="shop"
-        options={{
-          title: 'Shop',
-          tabBarIcon: ({ color, size }) => (
-            <FontAwesome name="shopping-bag" color={color} size={size } />
-          ),
-        }}
-      />
+     
       <Tabs.Screen
         name="alerte"
         options={{
