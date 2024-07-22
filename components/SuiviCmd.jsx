@@ -52,11 +52,8 @@ const SuiviCmd = () => {
   const handlePress = (lien) => {
     router.push(`/EtapeSuiviCom/${lien}`);
   };
-
-
   return (
-    <ScrollView className="p-4 bg-gray-100">
-      
+    <ScrollView className="p-4 bg-gray-100">  
       {products.map((product) => (
         <ProductCard className='' key={product.id} onPress={() => handlePress(product.lien)}>
           <ProductImage source={product.image} />
@@ -72,4 +69,5 @@ const SuiviCmd = () => {
     </ScrollView>
   );
 };
+
 export default SuiviCmd;

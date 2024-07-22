@@ -49,7 +49,7 @@ const Commentaire = () => {
         {/* Section Commentaires */}
         <ScrollView className="flex-1  ">
           {commentaires.map(commentaire => (
-            <View key={commentaire.id} className="p-4 border border-slate-150 mb-4 rounded-xl">
+            <View key={commentaire.id} className="p-4 border border-gray-200 mb-4 rounded-xl">
               <Text className="font-bold">{commentaire.nom}</Text>
               <Text className="text-gray-500">{commentaire.date}</Text>
               <Text>Note: {commentaire.note} ⭐</Text>
