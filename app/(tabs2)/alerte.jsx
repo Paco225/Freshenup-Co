@@ -10,9 +10,8 @@ const alerte = () => {
       <Back 
       title = "Notifications"
       />
-      <Notification/>
-    </SafeAreaView>
-   
+      <Notification backgroundColor = 'rgba(29, 166, 248, 1)' />
+    </SafeAreaView>  
   )
 }
 
