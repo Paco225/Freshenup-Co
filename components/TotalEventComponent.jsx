@@ -11,7 +11,7 @@ const TotalEventComponent = () => {
   const router = useRouter();
 
   return (
-    <View className="h-full p-4 bg-white rounded-lg shadow-lg">
+    <View className="h-full p-4  bg-white">
       <View className="mb-4">
         <Text className="text-lg font-semibold">Nombre de place salle</Text>
         <TextInput
@@ -46,7 +46,7 @@ const TotalEventComponent = () => {
           onChangeText={setTime}
         />
       </View>
-      <View className="mb-4 p-4 bg-blue-100 rounded">
+      <View className="mb-4 h-28 p-4 bg-blue-100 rounded">
         <Text className="text-xl font-bold text-center text-blue-600">
           Prix
         </Text>
@@ -54,8 +54,8 @@ const TotalEventComponent = () => {
           {price}
         </Text>
       </View>
-      <View className="mt-4">
-        <Button title="Valider" onPress={() => router.push('/')} />
+      <View className="mt-4 ">
+        <Button className="" title="Valider" onPress={() => router.push('/')} />
       </View>
     </View>
   );

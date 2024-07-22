@@ -8,12 +8,13 @@ import vet from '../../assets/images/vetement.jpg'
 import drap from '../../assets/images/drap.png'
 import { FontAwesome } from '@expo/vector-icons';
 import { Link, useNavigation } from 'expo-router';
-
+import { useRouter } from 'expo-router';
 
 const StyledView = styled(View);
 const StyledText = styled(Text);
 const StyledImage = styled(Image);
 const StyledButton = styled(TouchableOpacity);
+
 
 const products = [
     {
@@ -76,11 +77,8 @@ const ProductCard = ({ product }) => (
                 )} className="mt-1 text-lg">{product.price} FCFA</StyledText>
             </StyledView>
         </Pressable>
-
 );
-
 const LessiveDetail = () => (
-
     <ScrollView className='bg-white'>
         <View className=' '>
         </View>
@@ -93,10 +91,6 @@ const LessiveDetail = () => (
                 ))}
             </StyledView>
         </Link>
-
-
     </ScrollView>
-
 );
-
 export default LessiveDetail;
